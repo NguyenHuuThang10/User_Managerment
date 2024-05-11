@@ -1,0 +1,97 @@
+Thực hành làm module quản lý người dùng (users) bao gồm các chức năng:
+
+Nhóm 1: Xác thực truy cập
+
+- Đăng nhập
+- Đăng ký
+- Đăng xuất
+- Quên mật khẩu
+- Kích hoạt tài khoản
+
+Nhóm 2: Quản lý người dùng
+- Xác thực người dùng đăng nhập
+- Thêm người dùng
+- Sửa người dùng
+- Xoá người dùng
+- Hiển thị danh sách người dùng
+- Phân trang
+- Tìm kiếm, lọc
+
+Nội dung chi tiết:
+
+01. Thiết kế Database
+
+- Bảng users:
++ id int primary key
++ email varchar(100)
++ fullname varchar(50)
++ phone varchar(20)
++ password varchar(50)
++ forgotToken varchar(50)
++ activeToken varchar(50)
++ status tinyint
++ createAt datetime
++ updateAt datetime
+
+- Bảng loginToken
++ id int primary key
++ userId int foreign key đến users(id)
++ token varchar(50)
++ createAt datetime
+
+02. Xây dựng cấu trúc thư mục, file
+
+03. Code chức năng điều hướng modules (routes) - Phần 1
+
+04. Code chức năng điều hướng modules (routes) - Phần 2
+
+05. Tích hợp giao diện bootstrap - Phần 1
+
+06. Tích hợp giao diện bootstrap - Phần 2
+
+07. Kết nối database va viet ham xu ly database
+
+08. Viết các hàm xử lý session
+
+09. Viết hàm gửi email
+
+10. Viết các hàm filter, validate
+
+11. Hàm password_hash và password_verify
+
+12. Code chức năng đăng ký tài khoản - Phần 1
+- Đăng ký
+- Gửi email kích hoạt
+- Người dùng bấm vào link kích hoạt tài khoản (Hoặc OTP)
+
+13. Code chức năng đăng ký tài khoản - Phần 2
+
+14. Code chức năng đăng ký tài khoản - Phần 3
+
+15. Code chức năng kích hoạt tài khoản
+
+16. Code chức năng đăng nhập
+
+17. Code chức năng quên mật khẩu
++ Tạo forgotToken
++ Gửi email
++ Xác thực Token, hiện form reset password
++ Xử lý submit reset password
+
+18. Code chức năng đăng xuất
+
+19. Code chức năng hiển thị danh sách người dùng
+
+20. Thuật toán phân trang và xây dựng chức năng phân trang
+
+21. Code chức năng tìm kiếm, lọc dữ liệu
+
+22. Code chức năng thêm người dùng
+
+23. Code chức năng sửa người dùng
+
+24. Code chức năng xoá người dùng
+
+25. Tối ưu hoá ứng dụng - Phần 1
+
+26. Tối ưu hoá ứng dụng - Phần 2
